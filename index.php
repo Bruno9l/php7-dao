@@ -23,11 +23,26 @@ require_once("config.php");
 //-----------------------------------------------------------
 
 //---Carrega um usuario usando login e senha---
-$usuario = new Usuario();
-$usuario->login("root","!@#$%");
-echo $usuario;
+//$usuario = new Usuario();
+//$usuario->login("root","!@#$%");
+//echo $usuario;
 
 //-----------------------------------------------------------
+
+//---Insert de um usuario novo---
+//$aluno = new Usuario("aluno", "a1un0");
+//$aluno->insert();
+//echo $aluno;
+
+//-----------------------------------------------------------
+
+//---Alteração de usuario UPDATE
+$usuario = new Usuario();
+$usuario->loadById(8);
+$usuario->update("professor", "prof3ss0r");
+
+echo $usuario;
+
 
 //Select simples, usado para testar conexão
 /*$sql = new Sql();
